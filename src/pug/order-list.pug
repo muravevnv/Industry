@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .cabinet
+            .container 
+              .cabinet-wrapper 
+                .cabinet-nav 
+                  .cabinet-nav__item.is-active Личные данные
+                  .cabinet-nav__item Заказы
+                .cabinet-main 
+                  .cabinet-orders 
+                    .cabinet-section 
+                      .cabinet-section__title.section-title Активные
+                      .cabinet-section__content 
+                        .cabinet-order__item 
+                          .cabinet-order__item-top 
+                            .cabinet-order__item-date 24 мая 2023
+                            .cabinet-order__item-num № 2344-2416-7756
+                          .cabinet-order__item-amount 30 товаров
+                          .cabinet-order__item-price 132 402 498 ₽
+                          .cabinet-order__item-list 
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                            .cabinet-order__item-el Панелька SCS-14%
+                            .cabinet-order__item-el Вилка 2РМГ14Б4Ш1Е2 ОТК
+                            .cabinet-order__item-el Вилка приборная герметичная без кожуха
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                            .cabinet-order__item-all + Еще 24
+                    .cabinet-section 
+                      .cabinet-section__title.section-title Завершенные
+                      .cabinet-section__content 
+                        .cabinet-order__item.is-ended 
+                          .cabinet-order__item-top 
+                            .cabinet-order__item-date 24 мая 2023
+                            .cabinet-order__item-num № 2344-2416-7756
+                          .cabinet-order__item-amount 2 товара
+                          .cabinet-order__item-price 36 090 ₽
+                          .cabinet-order__item-list 
+                            .cabinet-order__item-el Вилка приборная герметичная без кожуха
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                        .cabinet-order__item.is-ended  
+                          .cabinet-order__item-top 
+                            .cabinet-order__item-date 24 мая 2023
+                            .cabinet-order__item-num № 2344-2416-7756
+                          .cabinet-order__item-amount 2 товара
+                          .cabinet-order__item-price 36 090 ₽
+                          .cabinet-order__item-list 
+                            .cabinet-order__item-el Вилка приборная герметичная без кожуха
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                        .cabinet-order__item.is-ended  
+                          .cabinet-order__item-top 
+                            .cabinet-order__item-date 24 мая 2023
+                            .cabinet-order__item-num № 2344-2416-7756
+                          .cabinet-order__item-amount 2 товара
+                          .cabinet-order__item-price 36 090 ₽
+                          .cabinet-order__item-list 
+                            .cabinet-order__item-el Вилка приборная герметичная без кожуха
+                            .cabinet-order__item-el Конденсатор Э92 4мкФ 450В 5%
+                  
+        include components/footer
+        include includes/scripts

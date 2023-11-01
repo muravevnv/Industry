@@ -1,0 +1,76 @@
+.basket-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 185px 0;
+
+  @include media(xl) {
+    padding: 114px 0;
+  }
+
+  @include media(sm) {
+    padding: 105px 0;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.27;
+    color: $grey-800;
+
+    @include media(md) {
+      font-size: 30px;
+    }
+
+    @include media(sm) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    max-width: 573px;
+    margin: 24px auto 0;
+    color: $grey-500;
+
+    a {
+      color: $aqua-300;
+    }
+  }
+
+  &__media {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 134px;
+      height: 134px;
+      transform: translate(-50%,-50%);
+      background-color: rgba(255, 255, 255, 0.30);
+      border-radius: 50%;
+    }
+  }
+
+  &__icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $white;
+  }
+}

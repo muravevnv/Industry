@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .basket 
+            .container 
+              .basket-wrapper 
+                .basket-content 
+                  .basket-main 
+                    .basket-head 
+                      h1.basket__title Корзина
+                      .basket-head__amount 12 334 товаров
+                    .basket-list 
+                      .basket-item 
+                        .basket-item__main 
+                          .basket-item__top 
+                            .basket-item__status.is-green В наличии: 200 шт
+                            .basket-item__articul Код товара: 2416-7756
+                          .basket-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                          .basket-item__desc Срок поставки на склад: 29 сен 2023
+                        .basket-item__controls
+                          .basket-item__count 
+                            .count  
+                              .count__minus 
+                                +svgSprite(12, 12, 'minus')
+                              .count__plus 
+                                +svgSprite(12, 12, 'plus')
+                              input.count__input(type="text" value="50 0000")
+                          .basket-item__price 132 402 498 ₽
+                        .basket-item__remove
+                          +svgSprite(22, 22, 'delete')
+                      .basket-item 
+                        .basket-item__main 
+                          .basket-item__top 
+                            .basket-item__status.is-red Нет в наличии
+                            .basket-item__articul Код товара: 2416-7756
+                          .basket-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                          .basket-item__desc Срок поставки на склад: 29 сен 2023
+                        .basket-item__controls
+                          .basket-item__count 
+                            .count  
+                              .count__minus 
+                                +svgSprite(12, 12, 'minus')
+                              .count__plus 
+                                +svgSprite(12, 12, 'plus')
+                              input.count__input(type="text" value="50 0000")
+                          .basket-item__price 132 402 498 ₽
+                        .basket-item__remove
+                          +svgSprite(22, 22, 'delete')
+                  .basket-section 
+                    .section-title Данные получателя
+                    .basket-section__wrapper
+                      form.basket-form(action="#")
+                        .form-section
+                          .form-group 
+                            label.form-label(for="#") Имя И ФАМИЛИЯ
+                            input.form-control(type="text" placeholder="Введите имя и фамилию...") 
+                          .form-group 
+                            label.form-label(for="#") EMail
+                            input.form-control(type="email" placeholder="Введите email...")  
+                  .basket-section 
+                    .section-title Адрес доставки
+                    .basket-section__wrapper
+                      form.basket-form(action="#")
+                        .form-section
+                          .form-group 
+                            label.form-label(for="#") Индекс
+                            input.form-control(type="text" placeholder="Введите индекс...") 
+                          .form-group 
+                            label.form-label(for="#") Страна
+                            input.form-control(type="text" placeholder="Введите страну...") 
+                          .form-group 
+                            label.form-label(for="#") ГОРОД
+                            input.form-control(type="text" placeholder="Введите город...") 
+                          .form-group 
+                            label.form-label(for="#") УЛИЦА
+                            input.form-control(type="text" placeholder="Введите улицу...")  
+                          .form-group 
+                            label.form-label(for="#") ДОМ
+                            input.form-control(type="text" placeholder="Введите номер дома...") 
+                          .form-group 
+                            label.form-label(for="#") КВАРТИРА/ОФИС
+                            input.form-control(type="text" placeholder="Введите номер квартиры/офиса...")  
+                  .basket-section 
+                    .section-title Способ оплаты
+                    .basket-section__wrapper
+                      .basket-payment
+                        .basket-payment__type
+                          input(checked type="radio" id="increase" name="type-sort" class="radio-input") 
+                          label(for="increase" class="radio-label") Оплата выставленного счёта
+                        .basket-payment__information После оформления заказа мы выставим Вам счёт на оплату. Пожалуйста, дождитесь звонка нашего менеджера для согласования деталей заказа.
+                        .form-file 
+                          .form-file__title Вы можете прикрепить реквизиты Вашего предприятия для выставления счёта:
+                          .form-file__attachments 
+                            .form-file__attach 
+                              .form-file__attach-icon 
+                              .form-file__attach-name
+                              .form-file__attach-remove 
+                          label.form-file__label(for="file")
+                            input.form-file__input(type="file" id="file")
+                            .form-file__wrapper
+                              .form-file__icon 
+                                +svgSprite(24, 24, 'download')
+                              .form-file__subtitle Кликните для выбора или перетащите файлы в данную область.
+                              .form-file__text Допустимые форматы: <span>.txt</span>, <span>.doc</span>, <span>.docх</span>, <span>.xml</span>, <span>.pdf</span>. <br> Файл не должен превышать <span>10 МБ</span>. Общий объем не более <span>10 ГБ</span>.
+                .basket-asside
+                  .basket-asside__title Оформление заказа
+                  .basket-asside__amount Всего товаров: 5
+                    span 1 039 300 ₽
+                  .basket-asside__price Итого:
+                    span 1 039 300 ₽
+                  .basket-asside__btn.btn.btn--secondary Оформить заказ
+                  .basket-asside__agreement Нажимая на кнопку «Оформить заказ», Вы даёте согласие на обработку <a href="#">персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a>.
+        include components/footer
+        include includes/scripts

@@ -1,0 +1,270 @@
+footer {
+  background-color: $black;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin-top: 30px;
+
+  @include media(lg) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  @include media(sm) {
+    margin-top: 16px;
+  }
+
+  @include media(xs) {
+    margin-top: 24px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $border;
+
+  @include media(lg) {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  @include media(md) {
+    gap: 40px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: $light;
+    max-width: 254px;
+  }
+
+  @include media(lg) {
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      max-width: 100%;
+    }
+  }
+
+  @include media(sm-575) {
+    gap: 16px;
+    span {
+      text-align: center;
+    }
+  }
+}
+
+.footer__tel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @include media(sm) {
+    flex-direction: column;
+  }
+}
+
+.footer__link-tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 40px;
+  background-color: $midnight-blue;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $aqua-50;
+      transition: 0.3s;
+    }
+
+    &:active {
+      background-color: $aqua-100;
+      transition: 0.3s;
+    }
+  }
+
+  &:active {
+    background-color: $aqua-100;
+    transition: 0.3s;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  span {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    color: $primary;
+  }
+}
+
+.footer__middle {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid $border;
+
+  @include media(lg) {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  gap: 36px;
+
+  @include media(lg) {
+    margin: 0 auto;
+  }
+
+  @include media(sm) {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+.footer__item {
+  a {
+    padding: 12px 0;
+    white-space: nowrap;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    color: $light;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      color: $aqua-400;
+      transition: 0.3s;
+    }
+
+    a:active {
+      color: $aqua-300;
+      transition: 0.3s;
+    }
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+
+  @include media(lg) {
+    align-items: center;
+    gap: 36px;
+  }
+}
+
+.footer__link-mail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  svg {
+    width: 16px;
+    height: 16px;
+    color: $aqua-200;
+    
+  }
+
+  span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: $grey;
+  }
+
+  @include media(lg) {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      text-align: center;
+    }
+  }
+}
+
+.footer__address {
+  display: flex;
+  text-align: end;
+  gap: 16px;
+  max-width: 388px;
+
+  span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: $grey;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    color: $aqua-200;
+    flex-shrink: 0;
+  }
+
+  @include media(lg) {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      text-align: center;
+    }
+  }
+}
+
+.footer__chart {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $grey;
+  max-width: 180px;
+  text-align: end;
+
+  @include media(lg) {
+    text-align: center;
+  }
+}
+
+.footer__copyright {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  color: $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

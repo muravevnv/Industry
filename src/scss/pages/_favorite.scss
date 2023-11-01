@@ -1,0 +1,50 @@
+
+.favorite {
+
+  &-wrapper {
+    padding: 16px 36px 36px;
+    border-radius: 36px;
+    background-color: $white;
+
+    @include media(lg) {
+      padding: 24px;
+    }
+
+    @include media(md) {
+      padding: 16px 24px;
+    }
+
+    @include media(sm) {
+      border-radius: 24px;
+    }
+
+    @include media(sm-575) {
+      padding: 16px 12px;
+    }
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    gap: 24px;
+
+    @include media(sm-575) {
+      margin: 16px 0;
+      gap: 16px;
+    }
+
+    @include media(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__result {
+    padding: 12px;
+    border-radius: 24px;
+    font-weight: 800;
+    color: $primary;
+    background-color: $midnight-blue;
+  }
+}

@@ -1,0 +1,198 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .search-result
+            .container 
+              .search-result-wrapper 
+                .search-result-head
+                  .search-result__subtitle Результаты по запросу
+                  h1.search-result__title Микросхема KP556PT4A Конденсатор 
+                .search-result-filter.filter 
+                  .filter-head 
+                    .filter-head__amount 12 334 товаров
+                    .filter-head__sort 
+                      span Показывать по:
+                      .amount
+                        .amount-item
+                          .amount-item__main
+                            input.amount-item__input(type="#" value="10") 
+                            .amount-item__arrow 
+                              +svgSprite(12, 12, 'arrow-down')
+                        .amount-list
+                          .amount-list__item 
+                            span 0
+                          .amount-list__item
+                            span 5
+                          .amount-list__item
+                            span 10
+                          .amount-list__item
+                            span 15
+                    .filter-head__toggle.js-filter-toggle
+                      +svgSprite(18, 18, 'settings')
+                  .filter-panel.js-filter 
+                    .filter-top 
+                      .filter-section 
+                        .filter-section__title Сортировать по:
+                        .filter-section__radio 
+                          .radio 
+                            input(type="radio", id="filer-radio-1" name="filter-radio" class="radio-input")
+                            label(for="filer-radio-1").radio-label По возрастанию цены
+                          .radio 
+                            input(type="radio", id="filer-radio-2" name="filter-radio" class="radio-input")
+                            label(for="filer-radio-2").radio-label По убыванию цены
+                          .radio 
+                            input(type="radio", id="filer-radio-3" name="filter-radio" class="radio-input")
+                            label(for="filer-radio-3").radio-label По популярности
+                    .filter-bottom
+                      .filter-section 
+                        .filter-section__title ЦЕНА за шт.
+                        .filter-section__range
+                          .range-inputs
+                            input.range__input(type="text" value="0") 
+                            input.range__input(type="text" value="0") 
+                          .range-slider
+                      .filter-section 
+                        .filter-section__title Наличие
+                        .filter-section__cheks 
+                          .checkbox 
+                            input.checkbox-input(type="checkbox" id="filter-check-1")
+                            label.checkbox-label(for="filter-check-1") Только в наличии
+                          .checkbox 
+                            input.checkbox-input(type="checkbox" id="filter-check-2")
+                            label.checkbox-label(for="filter-check-2") Под заказ
+                          .checkbox 
+                            input.checkbox-input(type="checkbox" id="filter-check-3")
+                            label.checkbox-label(for="filter-check-3") Ожидается поступление
+                          .checkbox 
+                            input.checkbox-input(type="checkbox" id="filter-check-4")
+                            label.checkbox-label(for="filter-check-4") Нет в наличии
+                .search-result-list
+                  .product-item 
+                    .product-item__main 
+                      .product-item__top 
+                        .product-item__status.is-blue Ожидается поступление
+                        .product-item__articul Код товара: 2416-7756
+                      .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                      .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                    .product-item__right 
+                      .product-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .product-item__price  
+                        .product-item__price-total 132 402 498 ₽
+                        .product-item__price-one 25,5 ₽/шт.
+                      .product-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .product-item__fav.is-active
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+                  .product-item 
+                    .product-item__main 
+                      .product-item__top 
+                        .product-item__status.is-green В наличии: 200 шт
+                        .product-item__articul Код товара: 2416-7756
+                      .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                      .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                    .product-item__right 
+                      .product-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .product-item__price  
+                        .product-item__price-total 132 402 498 ₽
+                        .product-item__price-one 25,5 ₽/шт.
+                      .product-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .product-item__fav.is-active
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+                  .product-item 
+                    .product-item__main 
+                      .product-item__top 
+                        .product-item__status.is-red Нет в наличии
+                        .product-item__articul Код товара: 2416-7756
+                      .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                      .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                    .product-item__right 
+                      .product-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .product-item__price  
+                        .product-item__price-total 132 402 498 ₽
+                        .product-item__price-one 25,5 ₽/шт.
+                      .product-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .product-item__fav.is-active
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+
+        include components/footer
+        include includes/scripts

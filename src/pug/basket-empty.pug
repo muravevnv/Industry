@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .basket 
+            .container
+              .basket-empty 
+                .basket-empty__media 
+                  .basket-empty__icon
+                    +svgSprite(46, 46, 'basket-empty')
+                .basket-empty__title В корзине ничего нет...
+                .basket-empty__text Загляните в <a href="#">каталог</a> или воспользуйтесь поиском <br>, чтобы найти что-то конкретное :)
+        include components/footer
+        include includes/scripts

@@ -1,0 +1,383 @@
+.basket {
+  height: 100%;
+
+  .container {
+    height: 100%;
+  }
+  
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include media(md) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &-content {
+    width: 100%;
+  }
+
+  &-asside {
+    position: -webkit-sticky;
+    position: sticky;
+    max-width: 416px;
+    width: 100%;
+    padding: 30px;
+    background-color: $white;
+    border-radius: 36px;
+    top: 10px;
+
+    @include media(xl) {
+      max-width: 350px;
+      padding: 30px 24px;
+    }
+
+    @include media(lg) {
+      max-width: 290px;
+    }
+
+    @include media(md) {
+      max-width: 100%;
+      padding: 24px;
+    }
+
+    @include media(sm) {
+      border-radius: 24px;
+    }
+
+    @include media(sm-575) {
+      padding: 24px 12px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    &__amount {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include media(md) {
+        padding-top: 16px;
+      }
+    }
+
+    &__price {
+      padding-top: 24px;
+      margin-top: 24px;
+      border-top: 1px solid $border-2;
+      font-size: 28px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media(lg) {
+        font-size: 24px;
+      }
+
+      @include media(md) {
+        padding-top: 16px;
+        font-size: 28px;
+      }
+    }
+
+    &__btn {
+      margin-top: 36px;
+
+      @include media(md) {
+        margin-top: 24px;
+      }
+    }
+
+    &__agreement {
+      margin-top: 36px;
+      font-size: 12px;
+      line-height: 1.41;
+      text-align: center;
+      color: $grey-500;
+
+      a {
+        color: $aqua-400;
+        font-weight: 700;
+      }
+
+      @include media(md) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &-main {
+    padding: 16px 36px 36px;
+    background-color: $white;
+    border-radius: 36px;
+
+    @include media(lg) {
+      padding: 16px 24px 24px;
+    }
+
+    @include media(sm) {
+      border-radius: 24px;
+    }
+
+    @include media(sm-575) {
+      padding: 16px 12px;
+    }
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+    gap: 24px;
+
+    @include media(sm-575) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__amount {
+      padding: 12px;
+      font-weight: 800;
+      line-height: 1;
+      color: $primary;
+      background-color: $midnight-blue;
+      border-radius: 24px;
+    }
+  }
+
+  &-item {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    + .basket-item {
+      border-top: 1px solid $border-2;
+      padding: 22px 0;
+    }
+
+    @include media(sm) {
+      border-radius: 16px;
+      padding: 12px;
+      background-color: $graphite-gray;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      + .basket-item {
+        border-top: 0;
+        padding: 12px;
+        margin-top: 16px;
+      }
+    }
+
+    &__main {
+      max-width: 346px;
+      width: 100%;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+      padding: 1.5px 0;
+
+      @include media(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 12px;
+      }
+    }
+
+    &__status {
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 6px;
+      color: $aqua-500;
+      border: 1px solid $aqua-500;
+      border-radius: 6px;
+
+      &.is-green {
+        color: $green;
+        border-color: $green;
+      }
+
+      &.is-red {
+        color: $red;
+        border-color: $red;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.33;
+
+      @include media(sm) {
+        font-size: 16px;
+      }
+    }
+
+    &__articul {
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    &__desc {
+      font-size: 13px;
+      line-height: 1.38;
+      color: $grey-500;
+      margin-top: 10px;
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @include media(xl) {
+        flex-direction: column-reverse;
+        gap: 16px;
+      }
+
+      @include media(sm) {
+        padding: 8px 0;
+        gap: 24px;
+        flex-direction: row;
+        margin-top: 16px;
+      }
+
+      @include media(sm-575) {
+        flex-direction: column;
+        gap: 22px;
+        padding: 0;
+        padding-bottom: 14px;
+      }
+    }
+
+    &__price {
+      padding: 2px 8px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $dark-900;
+    }
+
+    &__remove {
+      @include media(sm) {
+        position: absolute;
+        bottom: 28px;
+        right: 12px;
+      }
+    }
+  }
+
+  &-section {
+    margin-top: 26px;
+
+    .form-section {
+      padding: 0;
+    }
+
+    &__wrapper {
+      background-color: $white;
+      border-radius: 36px;
+      padding: 24px;
+
+      @include media(xl) {
+        padding: 24px 36px;
+      }
+
+      @include media(lg) {
+        padding: 24px ;
+      }
+
+      @include media(sm) {
+        border-radius: 24px;
+      }
+
+      @include media(sm-575) {
+        padding: 24px 12px;
+      }
+    }
+  }
+
+  &-payment {
+
+    &__information {
+      margin-bottom: 36px;
+      padding: 0 30px;
+      font-size: 14px;
+      line-height: 1.57;
+      color: $grey-500;
+    }
+
+    &__type {
+      padding: 24px 0;
+    }
+  }
+}
+
+.count {
+  width: 150px;
+  position: relative;
+
+  &__plus {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $border-2;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 2px;
+    right: 2px;
+  }
+
+  &__minus {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $border-2;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 2px;
+    left: 2px;
+  }
+
+  &__input {
+    display: inline-block;
+    height: 36px;
+    width: 100%;
+    background-color: $graphite-gray;
+    color: $dark-900;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px 41.5px;
+    border-radius: 12px;
+
+    @include media(sm) {
+      background-color: $white;
+      border: 1px solid $border-2;
+    }
+  }
+}

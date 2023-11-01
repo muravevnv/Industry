@@ -1,0 +1,61 @@
+// Add Fonts
+@mixin fonts_main {
+  font-family: "Manrope", "Tahoma", sans-serif;
+}
+
+// Mixin to manage responsive breakpoints
+// @param {String} $breakpoint - Breakpoint name
+$breakpoints: (
+  "xs": (
+    max-width: 374px,
+  ),
+  "sm-575": (
+    max-width: 575px,
+  ),
+  "sm": (
+    max-width: 767px,
+  ),
+  "md": (
+    max-width: 991px,
+  ),
+  "lg": (
+    max-width: 1199px,
+  ),
+  "xl": (
+    max-width: 1399px,
+  ),
+  "xxl": (
+    max-width: 1599px,
+  ),
+  "xs-plus": (
+    min-width: 577px,
+  ),
+  "sm-plus": (
+    min-width: 768px,
+  ),
+  "md-plus": (
+    min-width: 992px,
+  ),
+  "lg-plus": (
+    min-width: 1200px,
+  ),
+  "xl-plus": (
+    min-width: 1400px,
+  ),
+) !default;
+
+// @require $breakpoints
+@mixin media($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from #{$breakpoint}. Available breakpoints are: #{map-keys($breakpoints)}.';
+  }
+}

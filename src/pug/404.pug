@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .error 
+            .container
+              .error__numbers 404
+              .error__title Страница не найдена
+              .error__desc Вернитесь на Главную, загляните в <a href="#">каталог</a> или воспользуйтесь поиском, чтобы найти что-то конкретное :
+              .error__btn.btn На главную
+        include components/footer
+        include includes/scripts

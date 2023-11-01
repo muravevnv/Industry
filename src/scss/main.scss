@@ -1,0 +1,50 @@
+// Vendors
+
+// Config
+@import "config/variables";
+@import "config/mixins";
+@import "config/reset";
+@import "config/fonts";
+@import "config/global";
+@import "config/typography";
+@import "config/form";
+
+//Sections
+@import "sections/hero";
+@import "sections/advantages";
+@import "sections/news";
+@import "sections/supply";
+@import "sections/about";
+@import "sections/client";
+@import "sections/catalog";
+
+// Components
+
+@import "components/btn";
+@import "components/slider";
+@import "components/header";
+@import "components/footer";
+@import "components/breadcrumbs";
+@import "components/pagination";
+@import "components/product-item";
+@import "components/catalog-item";
+@import "components/amount";
+@import "components/filter";
+@import "components/file";
+@import "components/range";
+@import "components/modal";
+
+// Pages
+
+@import "pages/news";
+@import "pages/article";
+@import "pages/error";
+@import "pages/contacts";
+@import "pages/cabinet";
+@import "pages/buyers";
+@import "pages/favorite";
+@import "pages/product";
+@import "pages/basket";
+@import "pages/basket-empty";
+@import "pages/catalog";
+@import "pages/search-result";

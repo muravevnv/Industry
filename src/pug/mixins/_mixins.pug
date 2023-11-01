@@ -1,0 +1,13 @@
+mixin svgSprite(width, height, id)
+  svg(width= width, height= height)
+    use(xlink:href=`images/sprite.svg#${id}`)
+mixin breadcrumbs(items)
+  .breadcrumbs(items)
+    .container 
+      .breadcrumbs__list
+        .breadcrumbs__item 
+            svg 
+              use(xlink:href="images/sprite.svg#arrow-right")
+              span Главная
+        each item in items
+          .breadcrumbs__item= item

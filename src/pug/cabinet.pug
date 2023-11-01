@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .cabinet
+            .container 
+              .cabinet-wrapper 
+                .cabinet-nav 
+                  .cabinet-nav__item.is-active Личные данные
+                  .cabinet-nav__item Заказы
+                .cabinet-main 
+                  form(action="#").cabinet-form 
+                    .cabinet-section 
+                      .cabinet-section__title.section-title Информация
+                      .cabinet-section__content 
+                        .form-section
+                          .form-group 
+                            label.form-label(for="#") название организации 
+                            input.form-control(type="text" placeholder="Введите название...") 
+                          .form-group 
+                            label.form-label(for="#") ИНН
+                            input.form-control(type="text" placeholder="Введите ИНН...") 
+                          .form-group 
+                            label.form-label(for="#") контактный ТЕЛЕФОН
+                            input.form-control(type="text" placeholder="+7 (919) 000-00-00") 
+                          .form-group 
+                            label.form-label(for="#") EMail
+                            input.form-control(type="email" placeholder="Введите email...") 
+                    .cabinet-section 
+                      .cabinet-section__title.section-title Адрес доставки
+                      .cabinet-section__content 
+                        .form-section 
+                          .form-group 
+                            label.form-label(for="#") Индекс
+                            input.form-control(type="text" placeholder="Введите индекс...") 
+                          .form-group 
+                            label.form-label(for="#") Страна
+                            input.form-control(type="text" placeholder="Введите страну...") 
+                          .form-group 
+                            label.form-label(for="#") ГОРОД
+                            input.form-control(type="text" placeholder="Введите город...") 
+                          .form-group 
+                            label.form-label(for="#") УЛИЦА
+                            input.form-control(type="text" placeholder="Введите улицу...") 
+                          .form-group 
+                            label.form-label(for="#") ДОМ
+                            input.form-control(type="text" placeholder="Введите номер дома...") 
+                          .form-group 
+                            label.form-label(for="#") КВАРТИРА/ОФИС
+                            input.form-control(type="text" placeholder="Введите номер квартиры/офиса...") 
+                    button.form-btn.btn.btn--secondary Сохранить
+        include components/footer
+        include includes/scripts

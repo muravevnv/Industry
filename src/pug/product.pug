@@ -1,0 +1,235 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          +breadcrumbs(['Каталог продукции','1.54” 128x64 COG OLED-дисплейный графический модуль'])
+          .product 
+            .container 
+              .product-wrapper 
+                .product-main 
+                  .product__title 1.54” 128x64 COG OLED-дисплейный графический модуль
+                  .product__desc 
+                    p Наша компания работает только с юридическими лицами и только по безналичному расчету. Оплата производится по выставленному счету и является соглашением с условиями поставки. По всем вопросам (ценам, срокам и т.д.) просьба связаться с менеджером или отправить сообщение на адрес электронной почты: info@microin.ru.
+                    p Независимо от способа оплаты, с товаром Вы получите полный комплект документов:
+                    ul 
+                      li Оригинал счета.
+                      li Универсальный передаточный документ (УПД).
+                    p Для получения товара необходимо иметь при себе:
+                    ul 
+                      li Для юридических лиц: доверенность или печать, а также документ удостоверяющий личность.
+                      li Для транспортных компаний и курьерских служб: накладную или доверенность на получение товара.
+                    p Вы можете вызвать к нам любую удобную для Вас транспортную компанию. Для забора груза Вам необходимо будет предупредить менеджера о дате забора груза и предоставить информацию о транспортной компании, после этого менеджер вышлет вам точный адрес.
+                .product-asside 
+                  .product-top
+                    .product__status.is-green В наличии: 200 шт
+                    .product__articul Код товара: 2416-7756
+                  .product-tarrifs 
+                    .product-tarrifs__item от 5 шт: 
+                      span 25,5 ₽/шт. 
+                    .product-tarrifs__item от 10 шт: 
+                      span 24,5 ₽/шт. 
+                    .product-tarrifs__item от 100 шт: 
+                      span 24,5 ₽/шт. 
+                    .product-tarrifs__item от 500 шт: 
+                      span 24,5 ₽/шт. 
+                  .product-total
+                    .product__box Упаковка: 80 шт. 
+                    .product-bottom
+                      .product__price 
+                        .product__price-total 1 285 555,5 ₽
+                        .product__price-one 25,5 ₽/шт. 
+                      .product__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт.
+                    .product__add.btn.btn--secondary Добавить в корзину
+              .similar 
+                .similar__title.section-title Похожие товары
+                .similar-wrapper 
+                  .similar-list 
+                    .product-item 
+                      .product-item__main 
+                        .product-item__top 
+                          .product-item__status.is-green В наличии: 200 шт
+                          .product-item__articul Код товара: 2416-7756
+                        .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                        .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                      .product-item__right 
+                        .product-item__amount
+                          .amount
+                            .amount-item
+                              .amount-item__main
+                                input.amount-item__input(type="#" value="10") 
+                                .amount-item__arrow 
+                                  +svgSprite(12, 12, 'arrow-down')
+                              .amount-item__box Упаковка: 80/шт. 
+                            .amount-list
+                              .amount-list__item 
+                                span 0
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 50
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 500
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 1500
+                                | 925,5 ₽/шт. 
+                        .product-item__price  
+                          .product-item__price-total 132 402 498 ₽
+                          .product-item__price-one 25,5 ₽/шт.
+                        .product-item__add
+                          +svgSprite(22, 22, 'basket')
+                        .product-item__fav
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                          </svg>
+                    .product-item 
+                      .product-item__main 
+                        .product-item__top 
+                          .product-item__status.is-green В наличии: 200 шт
+                          .product-item__articul Код товара: 2416-7756
+                        .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                        .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                      .product-item__right 
+                        .product-item__amount
+                          .amount
+                            .amount-item
+                              .amount-item__main
+                                input.amount-item__input(type="#" value="10") 
+                                .amount-item__arrow 
+                                  +svgSprite(12, 12, 'arrow-down')
+                              .amount-item__box Упаковка: 80/шт. 
+                            .amount-list
+                              .amount-list__item 
+                                span 0
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 50
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 500
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 1500
+                                | 925,5 ₽/шт. 
+                        .product-item__price  
+                          .product-item__price-total 132 402 498 ₽
+                          .product-item__price-one 25,5 ₽/шт.
+                        .product-item__add
+                          +svgSprite(22, 22, 'basket')
+                        .product-item__fav
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                          </svg>
+                    .product-item 
+                      .product-item__main 
+                        .product-item__top 
+                          .product-item__status.is-green В наличии: 200 шт
+                          .product-item__articul Код товара: 2416-7756
+                        .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                        .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                      .product-item__right 
+                        .product-item__amount
+                          .amount
+                            .amount-item
+                              .amount-item__main
+                                input.amount-item__input(type="#" value="10") 
+                                .amount-item__arrow 
+                                  +svgSprite(12, 12, 'arrow-down')
+                              .amount-item__box Упаковка: 80/шт. 
+                            .amount-list
+                              .amount-list__item 
+                                span 0
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 50
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 500
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 1500
+                                | 925,5 ₽/шт. 
+                        .product-item__price  
+                          .product-item__price-total 132 402 498 ₽
+                          .product-item__price-one 25,5 ₽/шт.
+                        .product-item__add
+                          +svgSprite(22, 22, 'basket')
+                        .product-item__fav
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                          </svg>
+                    .product-item 
+                      .product-item__main 
+                        .product-item__top 
+                          .product-item__status.is-green В наличии: 200 шт
+                          .product-item__articul Код товара: 2416-7756
+                        .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                        .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                      .product-item__right 
+                        .product-item__amount
+                          .amount
+                            .amount-item
+                              .amount-item__main
+                                input.amount-item__input(type="#" value="10") 
+                                .amount-item__arrow 
+                                  +svgSprite(12, 12, 'arrow-down')
+                              .amount-item__box Упаковка: 80/шт. 
+                            .amount-list
+                              .amount-list__item 
+                                span 0
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 50
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 500
+                                | 925,5 ₽/шт. 
+                              .amount-list__item
+                                span 1500
+                                | 925,5 ₽/шт. 
+                        .product-item__price  
+                          .product-item__price-total 132 402 498 ₽
+                          .product-item__price-one 25,5 ₽/шт.
+                        .product-item__add
+                          +svgSprite(22, 22, 'basket')
+                        .product-item__fav
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                          </svg>
+                  .similar__btn.btn Перейти в раздел
+                  hr
+                  .bottom-text Надеемся, что работа с нами станет для Вас удобной! <br>
+                    | По всем вопросам о способах доставки можете писать менеджеру или на адрес электронной почты: 
+                    a(href="mailto:info@microin.ru") info@microin.ru
+
+        include components/footer
+        include includes/scripts

@@ -1,0 +1,154 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="css/swiper.min.css")
+    link(rel="stylesheet" href="css/jquery.fancybox.css")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    main 
+      section.hero 
+        .container 
+          .swiper.hero__slider 
+            .swiper-wrapper.hero__slider-wrapper 
+              .swiper-slide.hero__slide
+                .hero__slide-img 
+                  img(src="images/heroImg.png" alt="фон")
+                .hero__slide-content
+                  .hero__slide-logo 
+                    img(src="images/monogram.svg" alt="logo")
+                  h1.hero__slide-title  Надежный поставщик электронных компонентов
+              .swiper-slide.hero__slide
+                .hero__slide-img 
+                  img(src="images/heroImg.png" alt="фон")
+                .hero__slide-content
+                  .hero__slide-logo 
+                    img(src="images/monogram.svg" alt="logo")
+                  h1.hero__slide-title  Надежный поставщик электронных компонентов
+              .swiper-slide.hero__slide
+                .hero__slide-img 
+                  img(src="images/heroImg.png" alt="фон")
+                .hero__slide-content
+                  .hero__slide-logo 
+                    img(src="images/monogram.svg" alt="logo")
+                  h1.hero__slide-title  Надежный поставщик электронных компонентов            
+            .hero__slider-pagination
+            .hero__slider-navigation 
+              .hero__slider-prev 
+                svg 
+                  use(xlink:href="images/sprite.svg#arrow")
+              .hero__slider-next
+                svg 
+                  use(xlink:href="images/sprite.svg#arrow")
+      section.advantages
+        .container
+          .advantages__list 
+            .advantages__item
+              .advantages__item-img 
+                img(src="images/advantageIcon-1.svg" alt="icon")
+              h3.advantages__title Работаем с юридическими лицами по безналичному расчету
+              p.advantages__subtitle Поставка оборудования производится точно в сроки, согласованные с заказчиком
+            .advantages__item
+              .advantages__item-img 
+                img(src="images/advantageIcon-2.svg" alt="icon")
+              h3.advantages__title Гибкие условия доставки
+              p.advantages__subtitle Мы работаем с транспортными компаниями КСЭ DPD. При выставлении счета доставку можно включить либо отдельной строкой, либо в стоимость товара
+            .advantages__item
+              .advantages__item-img 
+                img(src="images/advantageIcon-3.svg" alt="icon")
+              h3.advantages__title Поддержка специалиста на всех этапах заказа
+              p.advantages__subtitle По всем вопросам вы можете написать менеджеру  или на адрес электронной почты: &nbsp;
+                a(href="mailto:info@microin.ru")  info@microin.ru
+      section.news-section 
+        .container
+          h2.news-section__title.section-title Новости компании
+          .swiper.news-section__slider.js-news-slider
+            .swiper-wrapper.news-section__slider-wrapper 
+              .swiper-slide.news-section__slide 
+                .news-section__slide-img 
+                  img(src="images/news-img.png" alt="")
+                .news-section__slide-content  
+                  p.news-section__slide-date 12.08.2023
+                  h3.news-section__slide-title Соблюдение сроков поставкии заголовок новости 
+                  p.news-section__slide-subtitle Поставка оборудования производится точно в сроки, согласованные с заказчиком
+                  button.news-section__slide-btn 
+                    span Читать далее
+                    svg  
+                      use(xlink:href="images/sprite.svg#arrow-right")
+              .swiper-slide.news-section__slide 
+                .news-section__slide-img 
+                  img(src="images/news-img.png" alt="")
+                .news-section__slide-content  
+                  p.news-section__slide-date 12.08.2023
+                  h3.news-section__slide-title Соблюдение сроков поставкии заголовок новости 
+                  p.news-section__slide-subtitle Поставка оборудования производится точно в сроки, согласованные с заказчиком
+                  button.news-section__slide-btn 
+                    span Читать далее
+                    svg  
+                      use(xlink:href="images/sprite.svg#arrow-right")
+              .swiper-slide.news-section__slide 
+                .news-section__slide-img 
+                  img(src="images/news-img.png" alt="")
+                .news-section__slide-content  
+                  p.news-section__slide-date 12.08.2023
+                  h3.news-section__slide-title Соблюдение сроков поставкии заголовок новости 
+                  p.news-section__slide-subtitle Поставка оборудования производится точно в сроки, согласованные с заказчиком
+                  button.news-section__slide-btn 
+                    span Читать далее
+                    svg  
+                      use(xlink:href="images/sprite.svg#arrow-right")
+              .swiper-slide.news-section__slide 
+                .news-section__slide-img 
+                  img(src="images/news-img.png" alt="")
+                .news-section__slide-content  
+                  p.news-section__slide-date 12.08.2023
+                  h3.news-section__slide-title Соблюдение сроков поставкии заголовок новости 
+                  p.news-section__slide-subtitle Поставка оборудования производится точно в сроки, согласованные с заказчиком
+                  button.news-section__slide-btn 
+                    span Читать далее
+                    svg  
+                      use(xlink:href="images/sprite.svg#arrow-right")
+          button.btn.news-section__btn Читать все новости
+      section.supply
+        .container
+          h2.supply__title.section-title Линии поставки
+          .swiper.supply__slider 
+            .swiper-wrapper.supply__slider-wrapper 
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-1.png" alt="")
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-2.png" alt="")
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-3.png" alt="")
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-4.png" alt="")
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-5.png" alt="")
+              .swiper-slide.supply__slide
+                .supply__slide-img
+                  img(src="images/supply-img-1.png" alt="")
+            .supply__scrollbar
+          .supply__content 
+            p.supply__subtitle Независимо от способа оплаты, с товаром Вы получите полный комплект документов:
+            ul.supply__list 
+              li.supply__item Оригинал счета.
+              li.supply__item Универсальный передаточный документ (УПД).
+          .supply__content 
+            p.supply__subtitle Для получения товара необходимо иметь при себе:
+            ul.supply__list 
+              li.supply__item Для юридических лиц: доверенность или печать, а также документ удостоверяющий личность.
+              li.supply__item Для транспортных компаний и курьерских служб: накладную или доверенность на получение товара.
+          .supply__content 
+            p.supply__subtitle Вы можете вызвать к нам любую удобную для Вас транспортную компанию. Для забора груза Вам необходимо будет предупредить менеджера о дате забора груза и предоставить информацию о транспортной компании, после этого менеджер вышлет вам точный адрес.
+    include components/footer
+    include includes/scripts

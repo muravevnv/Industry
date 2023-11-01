@@ -1,0 +1,40 @@
+- 
+  var newsList = [
+    {
+      id: 1,
+      date: '12.08.2023',
+      title: 'Соблюдение сроков поставки',
+      text: 'Поставка оборудования производится точно в сроки, согласованные с заказчиком'
+    },
+    {
+      id: 1,
+      date: '12.08.2023',
+      title: 'Соблюдение сроков поставки',
+      text: 'Поставка оборудования производится точно в сроки, согласованные с заказчиком'
+    },
+    {
+      id: 1,
+      date: '12.08.2023',
+      title: 'Соблюдение сроков поставки',
+      text: 'Поставка оборудования производится точно в сроки, согласованные с заказчиком'
+    },
+    {
+      id: 1,
+      date: '12.08.2023',
+      title: 'Соблюдение сроков поставки',
+      text: 'Поставка оборудования производится точно в сроки, согласованные с заказчиком'
+    },
+  ]
+
+.news-list 
+  each item in newsList
+    .news-item 
+      .news-item__img 
+        img(src=`images/news/news-${item.id}.png`, alt="Новость")
+      .news-item__info  
+        .news-item__date= item.date
+        .news-item__title= item.title
+        .news-item__bottom
+          .news-item__text= item.text
+          .news-item__icon
+            +svgSprite(14, 14, 'arrow-right')

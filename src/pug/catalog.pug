@@ -1,0 +1,242 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="css/swiper.min.css")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css")
+    link(href="css/main.css" rel="stylesheet")
+    title Каталог
+  body
+    include mixins/_mixins
+    include components/header
+    main
+      +breadcrumbs(['Каталог'])
+      .catalog 
+        .container 
+          .catalog-wrapper 
+            .catalog-panel 
+              .catalog-panel__toggler.js-catalog-toggle 
+                .catalog-panel__toggler-btn
+                  svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none")
+                    path(fill-rule="evenodd" clip-rule="evenodd" d="M0.625 5.70552C0.625 5.31587 0.943259 5 1.33585 5H11.226C11.6186 5 11.9368 5.31587 11.9368 5.70552C11.9368 6.09517 11.6186 6.41104 11.226 6.41104H1.33585C0.943259 6.41104 0.625 6.09517 0.625 5.70552ZM0.625 10C0.625 9.61035 0.943259 9.29448 1.33585 9.29448H6.89904C7.29163 9.29448 7.60989 9.61035 7.60989 10C7.60989 10.3896 7.29163 10.7055 6.89904 10.7055H1.33585C0.943259 10.7055 0.625 10.3896 0.625 10ZM0.625 14.2945C0.625 13.9048 0.943259 13.589 1.33585 13.589H11.226C11.6186 13.589 11.9368 13.9048 11.9368 14.2945C11.9368 14.6841 11.6186 15 11.226 15H1.33585C0.943259 15 0.625 14.6841 0.625 14.2945Z" fill="#E6EBF6")
+                  svg(class="catalog-panel__toggler-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none")
+                    path(fill-rule="evenodd" clip-rule="evenodd" d="M17.2918 14.7934C17.0142 15.0689 16.5641 15.0689 16.2865 14.7934L11.9596 10.4989C11.682 10.2234 11.682 9.77664 11.9596 9.50112L16.2865 5.20664C16.5641 4.93112 17.0142 4.93112 17.2918 5.20664C17.5694 5.48217 17.5694 5.92888 17.2918 6.2044L13.4675 10L17.2918 13.7956C17.5694 14.0711 17.5694 14.5178 17.2918 14.7934Z" fill="#E6EBF6")
+              .catalog-nav.js-catalog
+                .catalog-nav__item
+                    a(href="#") Микросхемы
+                .catalog-nav__item
+                    a(href="#") Транзисторы
+                .catalog-nav__item
+                    a(href="#") Тиристоры
+                .catalog-nav__item
+                    a(href="#") Диоды и стабилитроны
+                .catalog-nav__item
+                    a(href="#") Оптоэлектронные приборы
+                .catalog-nav__item
+                    a(href="#") Электровакуумные приборы
+                .catalog-nav__item
+                    a(href="#") Конденсаторы
+                .catalog-nav__item
+                    a(href="#") Резисторы
+                .catalog-nav__item
+                    a(href="#") Резонаторы и фильтры
+                .catalog-nav__item
+                    a(href="#") Реле и контакторы
+                .catalog-nav__item
+                    a(href="#") Переключатели
+                .catalog-nav__item
+                    a(href="#") Соединители электрические
+                .catalog-nav__item
+                    a(href="#") Предохранители
+                .catalog-nav__item
+                    a(href="#") Электрические машины
+                .catalog-nav__item
+                    a(href="#") Дроссели и трансформаторы
+                .catalog-nav__item
+                    a(href="#") Установочные изделия
+            .catalog-content
+              h1.catalog__title Каталог товаров
+              .catalog-filter.filter 
+                .filter-head 
+                  .filter-head__amount 12 334 товаров
+                  .filter-head__sort 
+                    span Показывать по:
+                    .amount
+                      .amount-item
+                        .amount-item__main
+                          input.amount-item__input(type="#" value="10") 
+                          .amount-item__arrow 
+                            +svgSprite(12, 12, 'arrow-down')
+                      .amount-list
+                        .amount-list__item 
+                          span 0
+                        .amount-list__item
+                          span 5
+                        .amount-list__item
+                          span 10
+                        .amount-list__item
+                          span 15
+                  .filter-head__toggle.js-filter-toggle
+                    +svgSprite(18, 18, 'settings')
+                .filter-panel.js-filter 
+                  .filter-top 
+                    .filter-section 
+                      .filter-section__title Сортировать по:
+                      .filter-section__radio 
+                        .radio 
+                          input(type="radio", id="filer-radio-1" name="filter-radio" class="radio-input")
+                          label(for="filer-radio-1").radio-label По возрастанию цены
+                        .radio 
+                          input(type="radio", id="filer-radio-2" name="filter-radio" class="radio-input")
+                          label(for="filer-radio-2").radio-label По убыванию цены
+                        .radio 
+                          input(type="radio", id="filer-radio-3" name="filter-radio" class="radio-input")
+                          label(for="filer-radio-3").radio-label По популярности
+                  .filter-bottom
+                    .filter-section 
+                      .filter-section__title ЦЕНА за шт.
+                      .filter-section__range
+                        .range-inputs
+                          input.range__input(type="text" value="0") 
+                          input.range__input(type="text" value="0") 
+                        .range-slider
+                    .filter-section 
+                      .filter-section__title Наличие
+                      .filter-section__cheks 
+                        .checkbox 
+                          input.checkbox-input(type="checkbox" id="filter-check-1")
+                          label.checkbox-label(for="filter-check-1") Только в наличии
+                        .checkbox 
+                          input.checkbox-input(type="checkbox" id="filter-check-2")
+                          label.checkbox-label(for="filter-check-2") Под заказ
+                        .checkbox 
+                          input.checkbox-input(type="checkbox" id="filter-check-3")
+                          label.checkbox-label(for="filter-check-3") Ожидается поступление
+                        .checkbox 
+                          input.checkbox-input(type="checkbox" id="filter-check-4")
+                          label.checkbox-label(for="filter-check-4") Нет в наличии
+              .catalog-list 
+                .catalog-item 
+                  .catalog-item__main 
+                    .catalog-item__top 
+                      .catalog-item__status.is-red Нет в наличии
+                      .catalog-item__articul Код товара: 2416-7756
+                    .catalog-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                    .catalog-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                  .catalog-item__right
+                    .catalog-item__controls 
+                      .catalog-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .catalog-item__price  
+                        .catalog-item__price-total 132 402 498 ₽
+                        .catalog-item__price-one 25,5 ₽/шт.
+                    .catalog-item__action
+                      .catalog-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .catalog-item__fav
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+                .catalog-item 
+                  .catalog-item__main 
+                    .catalog-item__top 
+                      .catalog-item__status Ожидается поступление
+                      .catalog-item__articul Код товара: 2416-7756
+                    .catalog-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                    .catalog-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                  .catalog-item__right
+                    .catalog-item__controls 
+                      .catalog-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .catalog-item__price  
+                        .catalog-item__price-total 132 402 498 ₽
+                        .catalog-item__price-one 25,5 ₽/шт.
+                    .catalog-item__action
+                      .catalog-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .catalog-item__fav
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+                .catalog-item 
+                  .catalog-item__main 
+                    .catalog-item__top 
+                      .catalog-item__status.is-green В наличии: 200 шт
+                      .catalog-item__articul Код товара: 2416-7756
+                    .catalog-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                    .catalog-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                  .catalog-item__right
+                    .catalog-item__controls 
+                      .catalog-item__amount
+                        .amount
+                          .amount-item
+                            .amount-item__main
+                              input.amount-item__input(type="#" value="10") 
+                              .amount-item__arrow 
+                                +svgSprite(12, 12, 'arrow-down')
+                            .amount-item__box Упаковка: 80/шт. 
+                          .amount-list
+                            .amount-list__item 
+                              span 0
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 50
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 500
+                              | 925,5 ₽/шт. 
+                            .amount-list__item
+                              span 1500
+                              | 925,5 ₽/шт. 
+                      .catalog-item__price  
+                        .catalog-item__price-total 132 402 498 ₽
+                        .catalog-item__price-one 25,5 ₽/шт.
+                    .catalog-item__action
+                      .catalog-item__add
+                        +svgSprite(22, 22, 'basket')
+                      .catalog-item__fav
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                        </svg>
+        include components/footer
+        include includes/scripts

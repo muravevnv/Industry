@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          +breadcrumbs(['Контакты'])
+          .contacts 
+            .container 
+              .contacts-wrapper 
+                .contacts__title Контакты
+                .contacts-content
+                  .contacts-info
+                    .contacts-tel 
+                      .contacts__icon
+                        +svgSprite(16, 16, 'tel')
+                      a(href="").contacts-tel__link +7 (991) 609-00-02
+                      a(href="").contacts-tel__link +7 (991) 609-00-05
+                    .contacts__mail 
+                      .contacts__icon
+                        +svgSprite(16, 16, 'mail')
+                      | info@microin.ru
+                    .contacts__adress
+                      .contacts__icon
+                        +svgSprite(16, 16, 'point')
+                      p  124460, Москва, г. Зеленоград, к. 1100, этаж 3, помещ. 1, ком. 3, офис 19
+                      p Пн-Пт с 10:00 до 18:00 <br>
+                      | Сб, Вс - выходной
+                    .contacts__btn.btn.btn--icon 
+                      span Карточка предприятия
+                  .contacts-map
+                    img(src="images/map.png", alt="")
+        include components/footer
+        include includes/scripts

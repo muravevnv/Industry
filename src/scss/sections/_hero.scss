@@ -1,0 +1,284 @@
+.hero {
+  padding-top: 8px;
+  padding-bottom: 38px;
+
+  @include media(sm) {
+    padding-bottom: 32px;
+  }
+
+  @include media(xs) {
+    padding-bottom: 26px;
+  }
+}
+
+.hero__slider {
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__slider-wrapper {
+  position: relative;
+  height: 480px;
+
+  @include media(sm) {
+    height: 210px;
+  }
+
+  @include media(sm-575) {
+    height: 480px;
+  }
+}
+
+.hero__slide {
+  position: relative;
+  border-radius: 36px;
+
+  @include media(sm-575) {
+    border-radius: 24px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border-radius: 36px;
+    width: 100%;
+    height: 480px;
+    background-image: linear-gradient(
+        0deg,
+        #fff 23.15%,
+        rgba(255, 255, 255, 0.32) 70.83%,
+        rgba(255, 255, 255, 0) 77.31%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media(sm-575) {
+      border-radius: 24px;
+    }
+
+    @include media(sm) {
+      height: 210px;
+    }
+
+    @include media(sm-575) {
+      height: 480px;
+    }
+  }
+
+  .hero__slide-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 480px;
+    top: 0;
+
+    img {
+      border-radius: 36px;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      position: relative;
+
+      @include media(sm) {
+        height: 210px;
+      }
+
+      @include media(sm-575) {
+        height: 480px;
+      }
+    }
+  }
+}
+
+.hero__slide-logo {
+  padding-top: 121px;
+  margin-bottom: 36px;
+
+  @include media(md) {
+    display: block;
+    margin: 0 auto;
+    max-width: 191px;
+    margin-bottom: 36px;
+  }
+
+  @include media(sm) {
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 24px;
+
+    img {
+      width: 100px;
+      height: 47px;
+      margin-bottom: 12px;
+      padding-top: 24px;
+      margin: 0 auto;
+      padding: 0px 1.111px 3.111px 1.111px;
+    }
+  }
+}
+
+.hero__slide-title {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+  margin-bottom: 48px;
+
+  @include media(sm) {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    max-width: 482px;
+    margin: 0 auto;
+  }
+
+  @include media(sm-575) {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    max-width: 280px;
+  }
+
+  @include media(xs) {
+    max-width: 240px;
+  }
+}
+
+.hero__slide-content {
+  margin-left: auto;
+  max-width: 570px;
+  margin-right: 176px;
+
+  @include media(lg) {
+    margin-right: 65px;
+  }
+
+  @include media(md) {
+    margin-right: 95px;
+  }
+
+  @include media(md) {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @include media(sm-575) {
+    margin-top: 150px;
+    padding: 0 10px;
+  }
+}
+
+.hero__slider-pagination {
+  position: absolute;
+  max-width: 64px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+
+  border-radius: 100px;
+  background-color: $white;
+
+  @include media(sm) {
+    top: 150px;
+  }
+
+  @include media(sm-575) {
+    top: 400px;
+  }
+
+  & .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $aqua-300;
+    width: 12px;
+    height: 12px;
+  }
+
+  & .swiper-pagination-bullet {
+    background-color: $primary;
+    opacity: 1;
+  }
+}
+
+.hero__slider-navigation {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  position: absolute;
+  padding: 0px 16px;
+
+  @include media(md) {
+    padding: 0px 8px;
+  }
+
+  .hero__slider-prev,
+  .hero__slider-next {
+    background-color: $white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $aqua-50;
+        transition: 0.3s;
+      }
+
+      &:active {
+        background-color: $aqua-100;
+        transition: 0.3s;
+      }
+    }
+
+    &:active {
+      background-color: $aqua-100;
+      transition: 0.3s;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include media(sm) {
+      background-color: transparent;
+      height: 16px;
+      width: 16px;
+
+      @include media(sm-575) {
+        &:active {
+          color: $aqua-400;
+        }
+      }
+    }
+  }
+
+  .hero__slider-next {
+    transform: rotate(180deg);
+  }
+}

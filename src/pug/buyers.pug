@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+          .buyers 
+            .container 
+              .buyers-section
+                .buyers__title Покупателям
+                .buyers-advantages.buyers-nums 
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 01.
+                    .buyers-nums__item-desc Мы работаем по ФЗ 44, ФЗ 94, ФЗ 223, ФЗ 275 
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 02.
+                    .buyers-nums__item-desc Мы зарегистрированы на торговых электронных площадках, в том числе и на АСТ ГОЗ
+                  .buyers-nums__item.buyers-nums__item--xl 
+                    .buyers-nums__item-num 03.
+                    .buyers-nums__item-desc Вы можете присылать нам перечень интересующих Вас товаров на электронную почту 
+                      a(href="#") info@microin.ru   
+                      |  или через BOOM поиск тех позиций, которые Вас интересуют и которые не представлены на сайте
+                .buyers__img 
+                  img(src="images/buyers-img.png", alt="")
+                .buyers-action 
+                  .buyers__btn.btn.btn--icon 
+                    +svgSprite(25, 25, 'document')
+                    span Карточка предприятия
+                  .buyers__btn.btn.btn--icon
+                    +svgSprite(25, 25, 'document-add')
+                    span Договор (образец)
+              .section-title Доставка
+              .buyers-section
+                .buyers-nums 
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 01.
+                    .buyers-nums__item-desc Мы работаем только с юридическими лицами 
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 02.
+                    .buyers-nums__item-desc Только по безналичному расчету
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 03.
+                    .buyers-nums__item-desc Оплата  является соглашением с условиями поставки
+                  .buyers-nums__item 
+                    .buyers-nums__item-num 04.
+                    .buyers-nums__item-desc Оплата  является соглашением с условиями поставки
+                .buyers-section__content
+                  .buyers-section__subtitle С товаром Вы получите следующий комплект документов:
+                  ul.buyers-section__list 
+                    li Оригинал счета;
+                    li Универсальный передаточный документ (УПД);
+                  .buyers-section__subtitle С товаром Вы получите следующий комплект документов:
+                  ul.buyers-section__list 
+                    li Для юридических лиц: доверенность или печать, а также документ удостоверяющий личность.
+                    li Для транспортных компаний и курьерских служб: накладную или доверенность на получение товара.
+              .section-title Оплата
+              .buyers-section
+                .buyers-nums 
+                  .buyers-nums__item.buyers-nums__item--xl 
+                    .buyers-nums__item-num 01.
+                    .buyers-nums__item-desc Только по безналичному расчету
+                      span Мы работаем с транспортными компаниями КСЭ, DPD. При выставлении счета доставку можно включить либо отдельной строкой, либо в стоимость товара.
+                  .buyers-nums__item.buyers-nums__item--xl 
+                    .buyers-nums__item-num 02.
+                    .buyers-nums__item-desc Вашей транспортной компанией
+                      span Вы можете вызвать к нам любую удобную для Вас транспортную компанию. Для забора груза Вам необходимо будет предупредить менеджера о дате забора груза и предоставить информацию о транспортной компании, после этого менеджер вышлет вам точный адрес.
+                hr
+                .buyers-text Надеемся, что работа с нами станет для Вас удобной! <br>
+                  | По всем вопросам о способах доставки можете писать менеджеру или на адрес электронной почты: 
+                  a(href="mailto:info@microin.ru") info@microin.ru 
+        include components/footer
+        include includes/scripts

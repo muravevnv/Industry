@@ -1,0 +1,166 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title Каталог
+    body
+        include mixins/_mixins
+        include components/header
+        main
+            .breadcrumbs
+                .container 
+                    .breadcrumbs__list
+                        .breadcrumbs__item 
+                            svg 
+                                use(xlink:href="images/sprite.svg#arrow-right")
+                            span Главная
+                        .breadcrumbs__item Каталог
+            section.catalog 
+                .container
+                    .catalog__wrap
+                        .catalog__sidebar
+                            .catalog__sidebar-btn
+                                svg 
+                                    use(xlink:href="images/sprite.svg#sidebarbtn")
+                            .catalog__nav
+                                .catalog__item
+                                    a(href="#") Микросхемы
+                                .catalog__item
+                                    a(href="#") Транзисторы
+                                .catalog__item
+                                    a(href="#") Тиристоры
+                                .catalog__item
+                                    a(href="#") Диоды и стабилитроны
+                                .catalog__item
+                                    a(href="#") Оптоэлектронные приборы
+                                .catalog__item
+                                    a(href="#") Электровакуумные приборы
+                                .catalog__item
+                                    a(href="#") Конденсаторы
+                                .catalog__item
+                                    a(href="#") Резисторы
+                                .catalog__item
+                                    a(href="#") Резонаторы и фильтры
+                                .catalog__item
+                                    a(href="#") Реле и контакторы
+                                .catalog__item
+                                    a(href="#") Переключатели
+                                .catalog__item
+                                    a(href="#") Соединители электрические
+                                .catalog__item
+                                    a(href="#") Предохранители
+                                .catalog__item
+                                    a(href="#") Электрические машины
+                                .catalog__item
+                                    a(href="#") Дроссели и трансформаторы
+                                .catalog__item
+                                    a(href="#") Установочные изделия
+                        .catalog-product 
+                            h1.catalog-product__title Каталог товаров
+                            .catalog-product__control 
+                                .catalog-product__quantity 12 334 товаров
+                                .catalog-product__control-panel 
+                                    .catalog-product__dropdown-wrap Показывать по:
+                                        .catalog-product__dropdown
+                                            .catalog-product__number 12
+                                            .catalog-product__dropdown-btn
+                                                svg 
+                                                    use(xlink:href="images/sprite.svg#arrow")
+                                    .catalog-product__control-settings
+                                        svg
+                                            use(xlink:href="images/sprite.svg#settings")
+                            .catalog-filter.catalog-filter--hidden
+                                .catalog-filter__sort
+                                    h4.catalog-filter__title Сортировать по:
+                                    .catalog-filter__sort-list
+                                        .catalog-filter__sort-item
+                                            input(checked type="radio" id="increase" name="type-sort" class="radio-input") 
+                                            label(for="increase" class="radio-label") По возрастанию цены
+                                        .catalog-filter__sort-item
+                                            input(type="radio" id="decreasing" name="type-sort" class="radio-input")  
+                                            label(for="decreasing" class="radio-label") По убыванию цены
+                                        .catalog-filter__sort-item   
+                                            input(type="radio" id="popular" name="type-sort" class="radio-input") 
+                                            label(for="popular" class="radio-label") По популярности
+                                .catalog-filter__bottom 
+                                    .catalog-filter__price
+                                        h4.catalog-filter__title ЦЕНА за шт.
+                                        .catalog-filter__price-wrap 
+                                            label(for="min")
+                                            input(type="number" placeholder="0" id="min" min="0" max="999999999")
+                                            label(for="max")
+                                            input(type="number" placeholder="999 999 999" id="max" min="0" max="999999999")
+                                        .catalog-filter__range
+                                            .catalog-filter__range-dot
+                                            .catalog-filter__range-line
+                                            .catalog-filter__range-dot
+
+                                    .catalog-filter__have
+                                        h4.catalog-filter__title Наличие
+                                        .catalog-filter__have-list 
+                                            .catalog-filter__have__item
+                                                input(checked type="checkbox" id="stock" class="checkbox-input") 
+                                                label(for="stock" class="checkbox-label") Только в наличии
+                                            .catalog-filter__have__item
+                                                input( type="checkbox" id="request" class="checkbox-input") 
+                                                label(for="request" class="checkbox-label") Под заказ
+                                            .catalog-filter__have__item
+                                                input( type="checkbox" id="wait" class="checkbox-input") 
+                                                label(for="wait" class="checkbox-label") Ожидается поступление
+                                            .catalog-filter__have__item
+                                                input( type="checkbox" id="out-stock" class="checkbox-input") 
+                                                label(for="out-stock" class="checkbox-label") Нет в наличии
+                            .catalog-list 
+                                .product-item 
+                                    .product-item__main 
+                                        .product-item__top 
+                                            .product-item__status.is-green В наличии: 200 шт
+                                            .product-item__articul Код товара: 2416-7756
+                                        .product-item__name Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%
+                                        .product-item__desc Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)
+                                    .product-item__right 
+                                        .product-item__amount
+                                            .amount
+                                                .amount-item
+                                                    .amount-item__main
+                                                        input.amount-item__input(type="#" value="10") 
+                                                        .amount-item__arrow 
+                                                        +svgSprite(12, 12, 'arrow-down')
+                                                    .amount-item__box Упаковка: 80/шт. 
+                                                .amount-list
+                                                    .amount-list__item 
+                                                        span 0
+                                                        | 925,5 ₽/шт. 
+                                                    .amount-list__item
+                                                        span 50
+                                                        | 925,5 ₽/шт. 
+                                                    .amount-list__item
+                                                        span 500
+                                                        | 925,5 ₽/шт. 
+                                                    .amount-list__item
+                                                        span 1500
+                                                        | 925,5 ₽/шт. 
+                                        .product-item__price  
+                                            .product-item__price-total 132 402 498 ₽
+                                            .product-item__price-one 25,5 ₽/шт.
+                                        .product-item__add
+                                            +svgSprite(22, 22, 'basket')
+                                        .product-item__fav.is-active
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+                                            </svg>
+
+
+
+
+
+
+
+
+        include components/footer
+        include includes/scripts

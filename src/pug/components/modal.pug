@@ -1,0 +1,19 @@
+.modal 
+  .modal-overlay.js-close-modal 
+  .modal-wrapper
+    .modal-content 
+      .modal__close.js-close-modal
+        +svgSprite(12, 12, 'close')
+      .modal__subtitle BOM-поиск
+      .modal__title Отправить заявку
+      form.modal-form(action="#" )
+        .form-group 
+          input.form-control(type="text" placeholder="Введите имя...") 
+        .form-group 
+          input.form-control(type="text" placeholder="Введите email...") 
+        .form-group 
+          input.form-control.js-phone(type="tel" placeholder="+7 (000) 000-00-00") 
+        .form-group 
+          textarea.form-control(name="", cols="30", rows="10" placeholder="Ваше сообщение...")
+        button.form-btn.btn Отправить
+      .modal-agreement Нажимая кнопку «Отправить», Вы даёте согласие на обработку <a href="#">персональных данных </a> и соглашаетесь с <a href="#">политикой конфиденциальности</a>.

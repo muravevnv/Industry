@@ -1,0 +1,175 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/swiper.min.css")
+        link(rel="stylesheet" href="css/jquery.fancybox.css")
+        link(href="css/main.css" rel="stylesheet")
+        title О компании
+    body
+        include mixins/_mixins
+        include components/header
+        main
+            .breadcrumbs
+                .container 
+                    .breadcrumbs__list
+                        .breadcrumbs__item 
+                            svg 
+                                use(xlink:href="images/sprite.svg#arrow-right")
+                            span Главная
+                        .breadcrumbs__item О компании
+            section.about 
+                .container
+                    .about__content
+                        h1.about__title О компании
+                        p.about__subtitle Компания «МикроИндастри» присутствует на рынке электронных компонентов сравнительно недавно, но продуманная ассортиментная стратегия, в частности, постоянное расширение ассортимента, поставки нестандартных, качественных и оригинальных электронных компонентов позволяют решать задачи самых требовательных клиентов. 
+                        p.about__subtitle Наши специалисты предоставляют <b>технические консультации</b> и <b>рекомендации по выбору элементной базы</b>. Планирование складских запасов и отработанные логистические схемы позволяют доставлять заказ покупателю «точно в срок».
+                        .about__advantages 
+                            .about__advantages-item 
+                                p.about__advantages-content 2,200+
+                                p.about__advantages-desc Довольных клиентов
+                            .about__advantages-item 
+                                p.about__advantages-content 180,000+
+                                p.about__advantages-desc Проданных товаров
+                        p.about__subtitle «МикроИндастри» – осуществляет поставки электронных компонентов для: российских предприятий военно-промышленного комплекса, космической отрасли, авиации и машиностроения, под потребности разработчиков и производителей телекоммуникационного оборудования, электронной аппаратуры специального и общего назначения. 
+                        .about-list 
+                            .about__item 01.
+                                span Российских предприятий военно-промышленного комплекса
+                            .about__item 02.
+                                span Космической отрасли, авиации и машиностроения
+                            .about__item 03.
+                                span Под потребности разработчиков и производителей телекоммуникационного оборудования, электронной аппаратуры специального и общего назначения. 
+                        p.about__subtitle  Компания «МикроИндастри» выступает тем недостающим звеном в системах снабжения и производства, когда традиционные каналы и производства не работают или в необходимой мере не соответствуют возникающим задачам на быстро развивающемся рынке электроники.
+                        button.btn.about__btn 
+                            svg 
+                                use(xlink:href="images/sprite.svg#document")
+                            span Карточка предприятия
+                        .about__link Надеемся, что работа с нами станет для Вас удобной! По всем вопросам о способах доставки можете писать менеджеру или на адрес электронной почты: 
+                            a(href="mailto:info@microin.ru")  info@microin.ru
+            section.advantages
+                .container
+                    .advantages__list 
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-4.svg" alt="icon")
+                            h3.advantages__title Удобство в совершении заказа
+                            p.advantages__subtitle Вы можете оформить заказ любым удобным для Вас способом: по телефону, факсу, электронной почте
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-5.svg" alt="icon")
+                            h3.advantages__title Гарантия качества
+                            p.advantages__subtitle Мы гарантируем качество поставляемой продукции в точном соответствии с требованиями законодательства РФ
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-6.svg" alt="icon")
+                            h3.advantages__title Оперативность
+                            p.advantages__subtitle Мы обработаем вашу заявку в день поступления и ответим на все вопросы о предлагаемой нами продукции
+
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-7.svg" alt="icon")
+                            h3.advantages__title Минимальная сумма заказа
+                            p.advantages__subtitle Мы понимаем потребности наших заказчиков и обработаем заявку даже на сумму 100 рублей, если в этом есть необходимость
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-3.svg" alt="icon")
+                            h3.advantages__title Персональный менеджер
+                            p.advantages__subtitle Мы заботимся о наших клиентах, поэтому с момента поступления заявки до отгрузки товара с Вами будет работать Ваш персональный менеджер
+                        .advantages__item
+                            .advantages__item-img 
+                                img(src="images/advantageIcon-8.svg" alt="icon")
+                            h3.advantages__title Соблюдение сроков поставки
+                            p.advantages__subtitle Поставка комплектующих производится точно в сроки, согласованные с заказчиком
+            section.clients 
+                .container 
+                    h2.clients__title.section-title Линии поставки
+                    .clients__list
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-1.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-2.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-3.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-4.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-5.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-6.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-25.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-7.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-8.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-9.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-10.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-11.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-12.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-13.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-26.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-14.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-15.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-16.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-17.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-18.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-27.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-19.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-20.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-21.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-22.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-23.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-24.png" alt="")
+                        .clients__item
+                            .clients__item-img
+                                img(src="images/clients/clients-28.png" alt="")
+
+        include components/footer
+        include includes/scripts

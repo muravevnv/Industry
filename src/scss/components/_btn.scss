@@ -1,0 +1,54 @@
+.btn {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  color: $white;
+  padding: 17px 24px;
+  border-radius: 48px;
+  background-color: $primary;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $aqua-400;
+    }
+
+    &:active {
+      background-color: $aqua-300;
+    }
+  }
+
+  &:active {
+    background-color: $aqua-300;
+  }
+
+  &:disabled {
+    background-color: $main-bg;
+    pointer-events: none;
+  }
+
+  &--secondary {
+    background-color: $yellow;
+    color: $grey-700;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #FFDB66;
+      }
+  
+      &:active {
+        background-color: #F0B800;
+      }
+    }
+  }
+
+  &--icon {
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+  }
+}
