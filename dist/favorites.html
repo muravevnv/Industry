@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container">
+        <div class="header__top"> 
+          <div class="header__burger">
+            <div> </div>
+            <div> </div>
+            <div> </div>
+          </div><a class="header__logo" href="#"><img src="images/logo.svg" alt="logo"></a>
+          <nav class="header__nav header__nav--hidden">
+            <div class="header__nav-closed"> 
+              <div> </div>
+              <div> </div>
+            </div>
+            <ul class="header__list"> 
+              <li class="header__item"><a href="#">Главная </a></li>
+              <li class="header__item"><a href="#">Новости </a></li>
+              <li class="header__item"><a href="#">Покупателям</a></li>
+              <li class="header__item"><a href="#">О компании </a></li>
+              <li class="header__item"><a href="#">Контакты </a></li>
+              <li class="header__item header__item--search js-open-modal"><span href="#">BOM-поиск </span></li>
+            </ul>
+          </nav>
+          <div class="header__contacts"> <a class="header__link" href="tel:+79918779192"> <span>+7 (991) 877-91-92</span>
+              <div class="header__link-icon">
+                <svg> 
+                  <use xlink:href="images/sprite.svg#tel"> </use>
+                </svg>
+              </div></a><a class="header__link" href="mailto:info@microin.ru">info@microin.ru
+              <svg> 
+                <use xlink:href="images/sprite.svg#mail"> </use>
+              </svg></a></div>
+        </div>
+        <div class="header__bottom"> 
+          <div class="header__catalog-search"> 
+            <button class="btn header__btn"> <span>Каталог продукции</span></button><input type="text" placeholder="Поиск товара..." class="header__search"> 
+          </div>
+          <div class="header__catalog-nav header__catalog-nav--hidden"> 
+            <div class="header__catalog-item">Микросхемы</div>
+            <div class="header__catalog-item">Транзисторы</div>
+            <div class="header__catalog-item">Тиристоры</div>
+            <div class="header__catalog-item">Диоды и стабилитроны</div>
+            <div class="header__catalog-item">Оптоэлектронные приборы</div>
+            <div class="header__catalog-item">Электровакуумные приборы</div>
+            <div class="header__catalog-item">Конденсаторы</div>
+            <div class="header__catalog-item">Резисторы</div>
+            <div class="header__catalog-item">Резонаторы и фильтры</div>
+            <div class="header__catalog-item">Реле и контакторы</div>
+            <div class="header__catalog-item">Переключатели</div>
+            <div class="header__catalog-item">Соединители электрические</div>
+            <div class="header__catalog-item">Предохранители</div>
+            <div class="header__catalog-item">Электрические машины</div>
+            <div class="header__catalog-item">Дроссели и трансформаторы</div>
+            <div class="header__catalog-item">Установочные изделия</div>
+          </div>
+          <div class="header__user-nav"> 
+            <button class="header__user-btn header__user-btn--search">
+              <svg> 
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <button class="header__user-btn header__user-btn--basket">
+              <svg> 
+                <use xlink:href="images/sprite.svg#basket"></use>
+              </svg>
+            </button>
+            <button class="header__user-btn">
+              <svg> 
+                <use xlink:href="images/sprite.svg#profile"></use>
+              </svg>
+            </button>
+            <button class="header__user-btn">
+              <svg> 
+                <use xlink:href="images/sprite.svg#mark"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__search-select">
+             <input type="text" placeholder="Поиск товара..." class="header__search"> 
+            <div class="header__search-result">
+              <div class="header__about-item"> 
+                <p class="header__about-item-name">Конденсатор Э92 4мкФ 450В 5%</p>
+                <p class="header__about-item-code">Код товара: 2416-7756</p>
+              </div>
+              <div class="header__about-price-wrap">
+                <p class="header__about-price">132 402 498 ₽</p>
+                <p class="header__about-price-quantity">25,5 ₽/шт.</p>
+              </div>
+            </div>
+            <div class="header__search-result">
+              <div class="header__about-item"> 
+                <p class="header__about-item-name">Микросхема KP556PT4A Конденсатор Э92 </p>
+                <p class="header__about-item-code">Код товара: 2416-7756</p>
+              </div>
+              <div class="header__about-price-wrap">
+                <p class="header__about-price">132 402 498 ₽</p>
+                <p class="header__about-price-quantity">25,5 ₽/шт.</p>
+              </div>
+            </div>
+            <div class="header__search-result">
+              <div class="header__about-item"> 
+                <p class="header__about-item-name">Конденсатор Э92 4мкФ 450В 5%</p>
+                <p class="header__about-item-code">Код товара: 2416-7756</p>
+              </div>
+              <div class="header__about-price-wrap">
+                <p class="header__about-price">132 402 498 ₽</p>
+                <p class="header__about-price-quantity">25,5 ₽/шт.</p>
+              </div>
+            </div>
+            <div class="header__search-result">
+              <div class="header__about-item"> 
+                <p class="header__about-item-name">Конденсатор Э92 4мкФ 450В 5%</p>
+                <p class="header__about-item-code">Код товара: 2416-7756</p>
+              </div>
+              <div class="header__about-price-wrap">
+                <p class="header__about-price">132 402 498 ₽</p>
+                <p class="header__about-price-quantity">25,5 ₽/шт. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="favorite"> 
+        <div class="container"> 
+          <div class="favorite-wrapper"> 
+            <div class="favorite-head">
+              <h1 class="favorite__title">Избранное</h1>
+              <div class="favorite__result">12 334 товаров</div>
+            </div>
+            <div class="product-item"> 
+              <div class="product-item__main"> 
+                <div class="product-item__top"> 
+                  <div class="product-item__status is-blue">Ожидается поступление</div>
+                  <div class="product-item__articul">Код товара: 2416-7756</div>
+                </div>
+                <div class="product-item__name">Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%</div>
+                <div class="product-item__desc">Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)</div>
+              </div>
+              <div class="product-item__right"> 
+                <div class="product-item__amount">
+                  <div class="amount">
+                    <div class="amount-item">
+                      <div class="amount-item__main">
+                        <input class="amount-item__input" type="#" value="10">
+                        <div class="amount-item__arrow"> 
+                              <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#arrow-down"></use>
+                              </svg>
+                        </div>
+                      </div>
+                      <div class="amount-item__box">Упаковка: 80/шт. </div>
+                    </div>
+                    <div class="amount-list">
+                      <div class="amount-list__item"> <span>0</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>50</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>500</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>1500</span>925,5 ₽/шт. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price"> 
+                  <div class="product-item__price-total">132 402 498 ₽</div>
+                  <div class="product-item__price-one">25,5 ₽/шт.</div>
+                </div>
+                <div class="product-item__add">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprite.svg#basket"></use>
+                      </svg>
+                </div>
+                <div class="product-item__fav is-active"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+</svg>
+                </div>
+              </div>
+            </div>
+            <div class="product-item"> 
+              <div class="product-item__main"> 
+                <div class="product-item__top"> 
+                  <div class="product-item__status is-green">В наличии: 200 шт</div>
+                  <div class="product-item__articul">Код товара: 2416-7756</div>
+                </div>
+                <div class="product-item__name">Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%</div>
+                <div class="product-item__desc">Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)</div>
+              </div>
+              <div class="product-item__right"> 
+                <div class="product-item__amount">
+                  <div class="amount">
+                    <div class="amount-item">
+                      <div class="amount-item__main">
+                        <input class="amount-item__input" type="#" value="10">
+                        <div class="amount-item__arrow"> 
+                              <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#arrow-down"></use>
+                              </svg>
+                        </div>
+                      </div>
+                      <div class="amount-item__box">Упаковка: 80/шт. </div>
+                    </div>
+                    <div class="amount-list">
+                      <div class="amount-list__item"> <span>0</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>50</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>500</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>1500</span>925,5 ₽/шт. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price"> 
+                  <div class="product-item__price-total">132 402 498 ₽</div>
+                  <div class="product-item__price-one">25,5 ₽/шт.</div>
+                </div>
+                <div class="product-item__add">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprite.svg#basket"></use>
+                      </svg>
+                </div>
+                <div class="product-item__fav is-active"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+</svg>
+                </div>
+              </div>
+            </div>
+            <div class="product-item"> 
+              <div class="product-item__main"> 
+                <div class="product-item__top"> 
+                  <div class="product-item__status is-red">Нет в наличии</div>
+                  <div class="product-item__articul">Код товара: 2416-7756</div>
+                </div>
+                <div class="product-item__name">Микросхема KP556PT4A Конденсатор Э92 3мкФ 450В 5%</div>
+                <div class="product-item__desc">Программируемое постоянное запоминающее устройство 1024 бит (256 слов х 4 разряда)</div>
+              </div>
+              <div class="product-item__right"> 
+                <div class="product-item__amount">
+                  <div class="amount">
+                    <div class="amount-item">
+                      <div class="amount-item__main">
+                        <input class="amount-item__input" type="#" value="10">
+                        <div class="amount-item__arrow"> 
+                              <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#arrow-down"></use>
+                              </svg>
+                        </div>
+                      </div>
+                      <div class="amount-item__box">Упаковка: 80/шт. </div>
+                    </div>
+                    <div class="amount-list">
+                      <div class="amount-list__item"> <span>0</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>50</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>500</span>925,5 ₽/шт. </div>
+                      <div class="amount-list__item"><span>1500</span>925,5 ₽/шт. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price"> 
+                  <div class="product-item__price-total">132 402 498 ₽</div>
+                  <div class="product-item__price-one">25,5 ₽/шт.</div>
+                </div>
+                <div class="product-item__add">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprite.svg#basket"></use>
+                      </svg>
+                </div>
+                <div class="product-item__fav is-active"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none"> 
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.23008 1.30901C3.37431 0.598959 5.00242 0.320312 7.00004 0.320312C8.99767 0.320312 10.6258 0.598962 11.77 1.30902C12.9733 2.05572 13.5455 3.21653 13.5455 4.7135V15.0977C13.5455 16.508 11.7645 17.2144 10.7228 16.2171L7.2145 12.8582C7.09608 12.7449 6.90401 12.7449 6.78558 12.8582L3.27728 16.2171C2.23561 17.2144 0.45459 16.508 0.45459 15.0977V4.7135C0.45459 3.21653 1.02682 2.05571 2.23008 1.30901Z"/>
+</svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__top"> <a class="footer__logo" href="#"> <img src="images/footer-logo.svg" alt=""><span>Надежный поставщик электронных компонентов</span></a>
+          <div class="footer__tel"> <a class="footer__link-tel" href="tel:+79916090002"> 
+              <svg> 
+                <use xlink:href="images/sprite.svg#tel"></use>
+              </svg><span>+7 (991) 609-00-02 </span></a><a class="footer__link-tel" href="tel:+79916090005"> 
+              <svg> 
+                <use xlink:href="images/sprite.svg#tel"></use>
+              </svg><span>+7 (991) 609-00-05</span></a></div>
+        </div>
+        <div class="footer__middle"> 
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#">Главная</a></li>
+              <li class="footer__item"><a href="#">Каталог</a></li>
+              <li class="footer__item"><a href="#">Новости</a></li>
+              <li class="footer__item"><a href="#">Покупателям</a></li>
+              <li class="footer__item"><a href="#">О компании</a></li>
+              <li class="footer__item"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__contacts"> <a class="footer__link-mail" href="mailto:info@microin.ru"> 
+              <svg> 
+                <use xlink:href="images/sprite.svg#mail"></use>
+              </svg><span>info@microin.ru</span></a>
+            <p class="footer__address"> 
+              <svg> 
+                <use xlink:href="images/sprite.svg#point"></use>
+              </svg><span>124460, Москва, г. Зеленоград, к. 1100, этаж 3, помещ. 1, ком. 3, офис 19</span>
+            </p>
+            <p class="footer__chart">Пн-Пт с 10:00 до 18:00 Сб, Вс - выходной</p>
+          </div>
+        </div>
+        <p class="footer__copyright">2023. Все права защищены</p>
+      </div>
+    </footer>
+    <div class="modal"> 
+      <div class="modal-overlay js-close-modal"> </div>
+      <div class="modal-wrapper">
+        <div class="modal-content"> 
+          <div class="modal__close js-close-modal">
+                <svg width="12" height="12">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__subtitle">BOM-поиск</div>
+          <div class="modal__title">Отправить заявку</div>
+          <form class="modal-form" action="#">
+            <div class="form-group"> 
+              <input class="form-control" type="text" placeholder="Введите имя...">
+            </div>
+            <div class="form-group"> 
+              <input class="form-control" type="text" placeholder="Введите email...">
+            </div>
+            <div class="form-group"> 
+              <input class="form-control js-phone" type="tel" placeholder="+7 (000) 000-00-00">
+            </div>
+            <div class="form-group"> 
+              <textarea class="form-control" name="" cols="30" rows="10" placeholder="Ваше сообщение..."></textarea>
+            </div>
+            <button class="form-btn btn">Отправить</button>
+          </form>
+          <div class="modal-agreement">Нажимая кнопку «Отправить», Вы даёте согласие на обработку <a href="#">персональных данных </a> и соглашаетесь с <a href="#">политикой конфиденциальности</a>.</div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
