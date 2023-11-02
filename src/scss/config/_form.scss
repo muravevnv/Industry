@@ -39,7 +39,6 @@
 
 input:checked + .radio-label {
   position: relative;
-  font-weight: 600;
 
   &::after {
     opacity: 1;
@@ -93,7 +92,6 @@ input:checked + .radio-label {
 }
 
 input:checked + .checkbox-label {
-  font-weight: 600;
   &::after {
     content: "";
     width: 14px;

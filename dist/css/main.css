@@ -360,7 +360,6 @@ h2 {
 
 input:checked + .radio-label {
   position: relative;
-  font-weight: 600;
 }
 input:checked + .radio-label::after {
   opacity: 1;
@@ -394,9 +393,6 @@ input:checked + .radio-label::after {
   display: none;
 }
 
-input:checked + .checkbox-label {
-  font-weight: 600;
-}
 input:checked + .checkbox-label::after {
   content: "";
   width: 14px;
@@ -3803,6 +3799,13 @@ footer {
   font-size: 20px;
   font-weight: 700;
   color: #15181f;
+}
+.basket-item__remove {
+  color: #6b7a99;
+  cursor: pointer;
+}
+.basket-item__remove:hover {
+  color: #f0412d;
 }
 .basket-section {
   margin-top: 26px;

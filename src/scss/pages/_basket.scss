@@ -278,10 +278,17 @@
     }
 
     &__remove {
+      color: $grey-500;
+      cursor: pointer;
+
       @include media(sm) {
         position: absolute;
         bottom: 28px;
         right: 12px;
+      }
+
+      &:hover {
+        color: $red;
       }
     }
   }
