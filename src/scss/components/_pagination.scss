@@ -24,6 +24,14 @@
     line-height: 14px; /* 100% */
     color: $primary;
 
+    &:hover {
+      background-color: $aqua-100;
+    }
+
+    &:active {
+      background-color: $aqua-50;
+    }
+
     &.is-active {
       background-color: $aqua-50;
     }
@@ -41,6 +49,14 @@
     &:disabled {
       pointer-events: none;
       color: $graphite-gray-450;
+    }
+
+    &:hover {
+      color: $aqua-400;
+    }
+
+    &:active {
+      color: $aqua-300;
     }
 
     svg {
@@ -77,6 +93,14 @@
 
     svg {
       display: none;
+    }
+
+    &:hover {
+      color: $aqua-400;
+    }
+
+    &:active {
+      color: $aqua-300;
     }
 
     @include media(sm) {

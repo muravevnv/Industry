@@ -270,6 +270,27 @@
     width: 100%;
     display: block;
     margin-top: 36px;
+
+    .no-added {
+      display: block;
+    }
+
+    .added {
+      display: none;
+    }
+
+    &.is-added {
+      background-color: $green;
+      color: $white;
+      
+      .no-added {
+        display: none;
+      }
+  
+      .added {
+        display: block;
+      }
+    }
   }
 }
 

@@ -29,6 +29,10 @@
     margin: 24px 0;
     gap: 24px;
 
+    @include media(sm) {
+      flex-wrap: wrap;
+    }
+
     @include media(sm-575) {
       margin: 16px 0;
       gap: 16px;

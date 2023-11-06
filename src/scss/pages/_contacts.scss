@@ -55,6 +55,20 @@
   &-map {
     width: 50%;
     height: 450px;
+    overflow: hidden;
+    border-radius: 24px;
+
+    iframe {
+      height: 450px;
+
+      @include media(lg) {
+        height: 538px;
+      }
+  
+      @include media(md) {
+        height: 320px;
+      }
+    }
 
     @include media(lg) {
       height: 538px;

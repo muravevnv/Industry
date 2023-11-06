@@ -46,7 +46,8 @@
           <div class="header__catalog-search"> 
             <button class="btn header__btn"> <span>Каталог продукции</span></button><input type="text" placeholder="Поиск товара..." class="header__search"> 
           </div>
-          <div class="header__catalog-nav header__catalog-nav--hidden"> 
+          <div class="header__catalog-overlay"></div>
+          <div class="header__catalog-nav">
             <div class="header__catalog-item">Микросхемы</div>
             <div class="header__catalog-item">Транзисторы</div>
             <div class="header__catalog-item">Тиристоры</div>
@@ -199,59 +200,44 @@
       <section class="news-section"> 
         <div class="container">
           <h2 class="news-section__title section-title">Новости компании</h2>
-          <div class="swiper news-section__slider js-news-slider">
-            <div class="swiper-wrapper news-section__slider-wrapper"> 
-              <div class="swiper-slide news-section__slide"> 
-                <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
-                <div class="news-section__slide-content"> 
-                  <p class="news-section__slide-date">12.08.2023</p>
-                  <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
-                  <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
-                  <button class="news-section__slide-btn"> <span>Читать далее</span>
-                    <svg> 
-                      <use xlink:href="images/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                </div>
+          <div class="news-section__slider">
+            <div class="news-section__slide"> 
+              <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
+              <div class="news-section__slide-content"> 
+                <p class="news-section__slide-date">12.08.2023</p>
+                <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
+                <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
+                <button class="news-section__slide-btn"> <span>Читать далее</span>
+                  <svg> 
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
               </div>
-              <div class="swiper-slide news-section__slide"> 
-                <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
-                <div class="news-section__slide-content"> 
-                  <p class="news-section__slide-date">12.08.2023</p>
-                  <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
-                  <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
-                  <button class="news-section__slide-btn"> <span>Читать далее</span>
-                    <svg> 
-                      <use xlink:href="images/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                </div>
+            </div>
+            <div class="news-section__slide"> 
+              <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
+              <div class="news-section__slide-content"> 
+                <p class="news-section__slide-date">12.08.2023</p>
+                <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
+                <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
+                <button class="news-section__slide-btn"> <span>Читать далее</span>
+                  <svg> 
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
               </div>
-              <div class="swiper-slide news-section__slide"> 
-                <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
-                <div class="news-section__slide-content"> 
-                  <p class="news-section__slide-date">12.08.2023</p>
-                  <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
-                  <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
-                  <button class="news-section__slide-btn"> <span>Читать далее</span>
-                    <svg> 
-                      <use xlink:href="images/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="swiper-slide news-section__slide"> 
-                <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
-                <div class="news-section__slide-content"> 
-                  <p class="news-section__slide-date">12.08.2023</p>
-                  <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
-                  <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
-                  <button class="news-section__slide-btn"> <span>Читать далее</span>
-                    <svg> 
-                      <use xlink:href="images/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                </div>
+            </div>
+            <div class="news-section__slide"> 
+              <div class="news-section__slide-img"> <img src="images/news-img.png" alt=""></div>
+              <div class="news-section__slide-content"> 
+                <p class="news-section__slide-date">12.08.2023</p>
+                <h3 class="news-section__slide-title">Соблюдение сроков поставкии заголовок новости </h3>
+                <p class="news-section__slide-subtitle">Поставка оборудования производится точно в сроки, согласованные с заказчиком</p>
+                <button class="news-section__slide-btn"> <span>Читать далее</span>
+                  <svg> 
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

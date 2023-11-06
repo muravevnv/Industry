@@ -722,9 +722,10 @@
   top: 80px;
   left: 0;
   right: 0;
+  display: none;
 
-  &--hidden {
-    display: none;
+  &.is-active {
+    display: grid;
   }
 
   @include media(lg) {
@@ -740,6 +741,24 @@
     grid-template-columns: repeat(1, 1fr);
     padding: 8px;
     top: 70px;
+    max-height: calc(100vh - 165px);
+    overflow-y: auto;
+  }
+}
+
+.header__catalog-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  display: none;
+  z-index: 2;
+
+  &.is-active {
+    display: block;
   }
 }
 

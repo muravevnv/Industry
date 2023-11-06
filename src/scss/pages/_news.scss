@@ -76,6 +76,8 @@
     align-items: center;
     position: relative;
 
+    
+
     @include media(md) {
       padding-right: 64px;
     }
@@ -173,6 +175,7 @@
       font-weight: 700;
       line-height: 24px; /* 120% */
       margin-bottom: 12px;
+      color: $dark-900;
     }
 
     &__text {
@@ -195,10 +198,27 @@
       align-items: center;
       justify-content: center;
       background-color: $midnight-blue;
+      flex-shrink: 0;
+      cursor: pointer;
+
+      svg {
+        display: block;
+        width: 14px;
+        height: 14px;
+      }
 
       @include media(sm) {
         position: static;
         transform: translate(0, 0);
+      }
+
+      &:hover {
+        background-color: $aqua-50;
+      }
+
+      &:active {
+        background-color: $aqua-300;
+        color: $white;
       }
     }
 

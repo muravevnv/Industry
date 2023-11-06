@@ -73,11 +73,11 @@
     font-size: 34px;
     font-style: normal;
     font-weight: 700;
-    line-height: 44px; /* 129.412% */
+    line-height: 1.29;
 
     @include media(sm) {
       font-size: 24px;
-      margin-bottom: 16px 0;
+      margin: 16px 0;
       padding-bottom: 16px;
     }
   }
