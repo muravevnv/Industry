@@ -1322,7 +1322,7 @@ input:checked + .checkbox-label::after {
   position: relative;
 }
 
-.header__catalog-search {
+.header__catalog-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1336,7 +1336,7 @@ input:checked + .checkbox-label::after {
   position: relative;
   width: 100%;
 }
-.header__catalog-search::after {
+.header__catalog-panel::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -1496,6 +1496,9 @@ input:checked + .checkbox-label::after {
   right: 0;
   -webkit-transform: translate(-50% -50%);
   transform: translate(-50% -50%);
+}
+.header__search-select.is-open {
+  display: block;
 }
 .header__search-select .header__search {
   display: none;
@@ -5411,10 +5414,10 @@ footer {
     background-color: #ffffff;
     border-radius: 100px;
   }
-  .header__catalog-search {
+  .header__catalog-panel {
     padding: 4px;
   }
-  .header__catalog-search::after {
+  .header__catalog-panel::after {
     top: 20px;
   }
   .header__search {
@@ -6012,7 +6015,7 @@ footer {
     width: 18px;
     height: 18px;
   }
-  .header__catalog-search::after {
+  .header__catalog-panel::after {
     display: none;
   }
   .header__user-btn {

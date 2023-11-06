@@ -92,7 +92,11 @@ $('.header__catalog-overlay').on('click', function(){
   $(".header__catalog-nav").removeClass('is-active')
 })
 
-// $('.header__search-select').toggleClassClass('is-open')
+$('.header__user-btn--search').on('click', function() {
+ $('.header__search-select').toggleClass('is-open')
+})
+
+
 
 //sidebar
 

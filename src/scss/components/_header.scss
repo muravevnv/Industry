@@ -380,7 +380,7 @@
   }
 }
 
-.header__catalog-search {
+.header__catalog-panel {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -618,6 +618,10 @@
   left: 0;
   right: 0;
   transform: translate(-50% -50%);
+
+  &.is-open {
+    display: block;
+  }
 
   @include media(sm-575) {
     top: 55px;
